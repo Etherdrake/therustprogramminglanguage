@@ -1,9 +1,13 @@
 fn main() {
     let s1 = String::from("hello");
 
-    let len = calculate_length(&s1);
-
+    let len = calculate_length(&s1); // the &s1 syntax lets us create
+                                              // a reference that refers to the value of
+                                              // s1 but does not own it
     println!("The length of '{}' is {}.", s1, len);
+
+    main_2()
+
 }
 
 fn calculate_length(s: &String) -> usize { // s is a reference to a String
